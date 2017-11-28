@@ -1,0 +1,49 @@
+<div class="container">
+	<form (ngSubmit)="onSubmit()" #formCadastro="ngForm">
+		<h1>Perfil Usuario</h1>
+		
+		<div class="form-group">
+			<label for="nome">Nome</label>
+			<input type="text" id="nome" name="nome" class="form-control"
+				[(ngModel)]="usuario.nome" #nome="ngModel"
+				placeholder="Nome do usuario" required>
+			<div class="alert alert-danger" [hidden]="nome.valid || nome.pristine">Você deve informar o nome do usuario.</div>
+		</div>
+
+		<div class="form-group">
+			<label for="sobrenome">Sobrenome</label>
+			<input type="text" id="sobrenome" name="sobrenome" class="form-control"
+				[(ngModel)]="usuario.sobrenome" #sobrenome="ngModel"
+				placeholder="Sobrenome do usuario" required>
+			<div class="alert alert-danger" [hidden]="sobrenome.valid || sobrenome.pristine">Você deve informar o sobrenome do usuario.</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="contato">Contato</label>
+			<input type="text" id="contato" name="contato" class="form-control"
+				[(ngModel)]="usuario.contato" #contato="ngModel"
+				placeholder="Contato do usuario" required>
+			<div class="alert alert-danger" [hidden]="contato.valid || contato.pristine">Você deve informar o contato do usuario.</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="login">Login</label>
+			<input type="text" id="login" name="login" class="form-control"
+				[(ngModel)]="usuario.login" #login="ngModel"
+				placeholder="Login do usuario" required>
+			<div class="alert alert-danger" [hidden]="login.valid || login.pristine">Você deve informar o login do usuario.</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="senha">Senha</label>
+			<input type="text" id="senha" name="senha" class="form-control"
+				[(ngModel)]="usuario.senha" #senha="ngModel"
+				placeholder="Senha do usuario" required>
+			<div class="alert alert-danger" [hidden]="senha.valid || senha.pristine">Você deve informar o senha do usuario.</div>
+		</div>
+		
+		<button type="submit" class="btn btn-success" [disabled]="!formCadastro.form.valid">Salvar</button>
+		<button class="btn btn-danger"(click)="telaHome()">Cancelar</button>
+	</form>
+</div>
+<!-- maxlength="100" style="width:400px" -->

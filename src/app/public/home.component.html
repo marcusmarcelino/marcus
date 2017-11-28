@@ -1,0 +1,38 @@
+<div class="container">
+	<nav class="navbar navbar-inverse navbar-toggleable-md" style="background-color:#F0F5F8;border-radius:10px;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" style="color:black;float:right" routerLink="/tela/home">TegloFit</a>
+
+        
+            <ul  style="display:inline-block">
+                <li class="nav-item" style="display:inline-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" style="color:black;" routerLink="/tela/home" >Home</a>
+                </li>
+                <li class="nav-item" style="display:inline-block" routerLinkActive="active">
+                    <a class="nav-link" style="color:black;" routerLink="/pesagens">Pesagens</a>
+                </li>
+				<li class="nav-item" style="display:inline-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" style="color:black;" routerLink="/usuario">Pefil</a>
+                </li>
+                <li class="nav-item" style="display:inline-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link" style="color:black;" routerLink="/sobre">Sobre</a>
+                </li>
+            </ul>
+        
+    </nav>
+	
+	<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Teglo Fit</h1>
+        <p>Seu gerenciador pessoal</p>
+        <p><a class="btn btn-primary btn-lg" routerLink="/sobre" role="button">Saiba mais &raquo;</a></p>
+		
+	</div>
+</div>
+
+	
+</div>
+
